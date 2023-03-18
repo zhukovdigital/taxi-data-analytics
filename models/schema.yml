@@ -1,0 +1,73 @@
+
+version: 2
+
+sources:
+  - name: jaffle_shop
+    tables:
+      - name: orders
+      - name: customers
+
+  - name: stripe
+    tables:
+      - name: payments
+
+exposures:
+
+  - name: weekly_jaffle_metrics
+    label: Jaffles by the Week
+    type: dashboard
+    maturity: high
+    owner:
+      name: Callum McData
+      email: data@jaffleshop.com
+    url: https://bi.tool/dashboards/1
+    description: >
+      Did someone say "exponential growth"?
+
+models:
+  - name: average_trip_distance
+    description: "Average distance of each trip"
+    columns:
+      - name: average_trip_distance
+        description: "The average trip distance in the dataset"
+        tests:
+          - not_null
+
+  - name: payments_by_type
+    description: "Count of payments for each type"
+    columns:
+      - name: payment_type
+        description: "Payment type"
+        tests:
+          - unique
+          - not_null
+      - name: cnt
+        description: "Number of trips"
+        tests:
+          - not_null
+
+
+  - name: pickups_by_location_count
+    description: "Pickups By Location Count"
+    columns:
+      - name: pickup_ntaname
+        description: "The location"
+        tests:
+          - not_null
+      - name: cnt
+        description: "The number of pickups"
+        tests:
+          - not_null
+            
+
+  - name: payments_by_type_very_large
+    description: "large payments by type"
+    columns:
+      - name: constant_currency 
+        description: "Currency of the payment"
+        tests:
+          - not_null
+      - name: payment_type
+        description: "Type of payment e.g. Credit Card or Cash"
+      - name: cnt
+        description: "Number of trips taken"
