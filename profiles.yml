@@ -1,4 +1,4 @@
-analytics:
+taxi_data_analytics:
 
   target: taxi_dev
   outputs:
@@ -7,12 +7,12 @@ analytics:
       schema: taxi_dev
       password: ''
     
-    tbc_test:
+    taxi_test:
       type: clickhouse
       schema: taxi_test
       password: ''
 
-    tbc_production:
+    taxi_production:
       type: clickhouse
       schema: taxi_production
       password: ''
