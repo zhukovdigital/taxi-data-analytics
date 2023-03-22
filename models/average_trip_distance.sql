@@ -2,7 +2,8 @@
 
 with source_data as (
 
-    select avg( trip_distance ) as average_trip_distance from default.trips
+    select null as average_trip_distance from default.trips
+    -- select avg( trip_distance ) as average_trip_distance from default.trips
 
 )
 
