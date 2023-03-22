@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
 with source_data as (
-    select distinct null as average_trip_distance from default.trips
+    select avg( trip_distance ) as average_trip_distance from default.trips
 )
 
 select *

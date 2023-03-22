@@ -32,6 +32,8 @@ models:
         description: "The average trip distance in the dataset"
         tests:
           - not_null
+          - accepted_values:
+              values: ['placed', 'shipped', 'completed', 'returned']
 
   - name: payments_by_type
     description: "Count of payments for each type"
