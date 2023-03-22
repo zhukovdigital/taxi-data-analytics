@@ -2,7 +2,7 @@ taxi_data_analytics:
 
   target: taxi_dev
   outputs:
-    tbc_dev:
+    taxi_dev:
       type: clickhouse
       schema: taxi_dev
       password: ''
