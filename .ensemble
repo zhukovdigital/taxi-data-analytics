@@ -15,3 +15,5 @@ branch_deployments:
     try_this : taxi_dev
     try_that : taxi_dev
     try_other : taxi_dev
+    try_beans : taxi_test
+    try_cake : taxi_test
