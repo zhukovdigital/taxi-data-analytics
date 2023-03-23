@@ -12,3 +12,6 @@ branch_deployments:
     main : taxi_production
     my_new_feature : taxi_dev
     add_a_new_model : taxi_dev
+    try_this : taxi_dev
+    try_that : taxi_dev
+    try_other : taxi_dev
