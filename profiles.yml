@@ -5,15 +5,18 @@ taxi_data_analytics:
     taxi_dev:
       type: clickhouse
       schema: taxi_dev
+      host: 35.189.109.115
       password: ''
     
     taxi_test:
       type: clickhouse
+      host: 35.189.109.115
       schema: taxi_test
       password: ''
 
     taxi_production:
       type: clickhouse
+      host: 35.189.109.115
       schema: taxi_production
       password: ''
 
